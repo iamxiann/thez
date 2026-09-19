@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="generated/job-settings.css">
+    <title>Xian Chat</title>
+</head>
+<body>
+    <main id="chat" aria-label="Chat">
+        <section id="chat-log" aria-live="polite"></section>
+
+        <section id="composer" class="hidden">
+            <div id="suggestions" class="hidden"></div>
+            <div id="emoji-picker" class="hidden" aria-label="Emoji picker"></div>
+            <form id="chat-form" autocomplete="off">
+                <span class="prompt" aria-hidden="true">›</span>
+                <input id="chat-input" maxlength="240" spellcheck="false" aria-label="Chat message">
+                <button id="emoji-button" class="icon-button" type="button" aria-label="Choose emoji" title="Choose emoji">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                </button>
+                <button id="send-button" class="icon-button send" type="submit" aria-label="Send message" title="Send message">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                </button>
+            </form>
+        </section>
+    </main>
+    <div id="job-settings-root"></div>
+    <script src="app.js"></script>
+    <script type="module" src="generated/job-settings.js"></script>
+</body>
+</html>
